@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Start page</title>
+    {%load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'start_page.css' %}" />
+
+</head>
+
+<body>
+
+    <canvas id="canvas" width="1500" height="200"></canvas>
+    <script type="text/javascript" src="{% static 'print_text.js'  %}" one="'HI, MY NAME IS CYBER. WELCOM TO MY WORLD.'"></script>
+    <p><a href="home_page">Enter >></a></p>
+    <p>{{data}}</p>
+
+</body>
+
+</html>

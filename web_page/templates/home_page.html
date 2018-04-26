@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home page</title>
+    {%load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home_page.css' %}" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>Home Page </h1>
+    </div>
+          
+    <div class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    <div class="row">
+        <div class="column side">
+            <h2>Name</h2>
+            <form action="your_name" method="post">
+                    {% csrf_token %}
+                   {{ form }}
+                   <input type="submit" value="Submit" />
+               </form>
+               <p>Submitted: {{data}}</p>
+        </div>
+        <div class="column middle">
+            <h2>Mail</h2>
+                <form action="contact" method="post">
+                    {% csrf_token %}
+                    {{ contact.as_p }}
+                    <input type="submit" value="Submit" />
+                </form>
+                <p>Submitted: {{subject}}</p>
+        </div>
+        <div class="column side">
+            <h2>To Do List</h2>
+            <form action="to_do_list" method="post">
+                    {% csrf_token %}
+                    {{ task.as_p }}
+                    <input type="submit" value="Submit" />
+            </form>
+            <p>Submitted: {{duedate}}</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+</body>
+
+</html>

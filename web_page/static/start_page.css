@@ -1,0 +1,21 @@
+
+body {
+    background: whitesmoke;
+    color:  black;
+    font-family: sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+canvas {
+    background: whitesmoke;
+    border:5px;
+    border-style: solid;
+    border-color: black;
+}
+a {
+    color: black;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
