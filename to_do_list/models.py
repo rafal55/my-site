@@ -11,7 +11,7 @@ class DueDate(models.Model):
 class Task(models.Model):
     due_date = models.ForeignKey(DueDate, on_delete = models.CASCADE)
     task_text = models.TextField()
-    priority = models.IntegerField(default=1)
+    priority = models.IntegerField(default=1, max_length=5)
 
     def __str__(self):
         return self.task_text
