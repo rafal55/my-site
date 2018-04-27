@@ -13,8 +13,9 @@
     </div>
           
     <div class="topnav">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+        <a href="start_page">Start Page</a>
+        <a href="race_car" target="a_iframe">Race Car.js</a>
+        <a href="slider" target="a_iframe">Slider.js</a>
         <a href="#">Link</a>
     </div>
     <div class="row">
@@ -26,15 +27,18 @@
                    <input type="submit" value="Submit" />
                </form>
                <p>Submitted: {{data}}</p>
+               <h3>Mail</h3>
+            <form action="contact" method="post">
+                {% csrf_token %}
+                {{ contact.as_p }}
+                <input type="submit" value="Submit" />
+            </form>
+            <p>Submitted: {{subject}}</p>
         </div>
         <div class="column middle">
-            <h2>Mail</h2>
-                <form action="contact" method="post">
-                    {% csrf_token %}
-                    {{ contact.as_p }}
-                    <input type="submit" value="Submit" />
-                </form>
-                <p>Submitted: {{subject}}</p>
+
+            <iframe src="" name="a_iframe"></iframe>
+
         </div>
         <div class="column side">
             <h2>To Do List</h2>
@@ -47,8 +51,9 @@
         </div>
     </div>
     <div class="footer">
-        <p>Footer</p>
+        <a href="start_page"><< Start Page</a>
     </div>
+
 </body>
 
 </html>

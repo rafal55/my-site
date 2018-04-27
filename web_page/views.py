@@ -55,3 +55,9 @@ def to_do_list(request):
         return render(request, 'home_page.html', {'form': form,'contact': contact,'duedate':duedate})
     else:    
         return render(request, 'home_page.html', {'form': form,'contact': contact,'duedate':duedate})
+
+def race_car(request):
+    return render(request, 'race_car.html')
+
+def slider(request):
+    return render(request, 'slider.html')
