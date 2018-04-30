@@ -32,6 +32,8 @@
 <body>
     <div class="header">
         <h1>Home Page </h1>
+        <h id = "x">x:  </h>
+        <h id = "y">y:  </h>
     </div>
           
     <div class="topnav">
@@ -61,7 +63,7 @@
         </div>
         <div id ="div1" class="column middle">
 
-           <iframe src="" name="a_iframe"></iframe>
+           <iframe src="race_car" name="a_iframe"></iframe>
 
 
         </div>
@@ -81,6 +83,13 @@
         <a href="start_page"><< Start Page</a>
     </div>
 
-</body>
+<!--Wheel selector-->
+<div class = "container">
+    <div id="circle">
+        <div class="line"></div>
+        <script src="{% static 'wheel.js' %}"></script>
+    </div>
+</div>
 
+</body>
 </html>
