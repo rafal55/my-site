@@ -14,8 +14,9 @@ var y_circle = circle.getBoundingClientRect().top + r;
 var x = e.clientX - x_circle;
 var y = e.clientY - y_circle;
 deg = Math.atan(-x/y);
-console.log(deg*180/Math.PI);
+console.log(deg);
 
 //rotate_wheel(deg);
-document.getElementById("circle").style.transform = "rotate("+deg*180/Math.PI+"deg)";
+if (e.clientY > y_circle){
+    document.getElementById("circle").style.transform = "rotate("+deg*180/Math.PI+"deg)";}
 };

@@ -2,31 +2,13 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home page</title>
     {%load static %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'home_page.css' %}" />
-
-    <script> 
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("#div1").animate({
-                    height: '800px',
-                    width: '80%',
-                    
-
-                });
-            });
-        });
-    </script>
-    <script>
-            $(document).ready(function(){
-                $("button").click(function(){
-                    $("#divside").hide();
-                });
-            });
-    </script>
-
+    
+    <script src="{% static 'iframe_show.js' %}"></script>
 </head>
 
 <body>
@@ -42,7 +24,8 @@
         <a href="race_car" target="a_iframe">Race Car.js</a>
         <a href="slider" target="a_iframe">Slider.js</a>
         
-        <button>Big window</button>
+        <button onclick="myFunction()">Toggle iframe</button>
+
     </div>
     <div class="row">
         <div class="column side">
@@ -61,12 +44,12 @@
             </form>
             <p>Submitted: {{subject}}</p>
         </div>
-        <div id ="div1" class="column middle">
-
-           <iframe src="race_car" name="a_iframe"></iframe>
 
 
+        <div id ="div1" class="column middle">Main Screen
+           <iframe id = "a_iframe" src="race_car" name="a_iframe"></iframe>
         </div>
+
 
         <div id = "divside" class="column side">
             <h2>To Do List</h2>
@@ -79,7 +62,8 @@
         </div>
 
     </div>
-    <div class="footer">
+    
+    <hr><div class="footer">
         <a href="start_page"><< Start Page</a>
     </div>
 
